@@ -8,7 +8,7 @@ import (
 func GetHealth() echo.HandlerFunc {
 	return func(c echo.Context) (err error) {
 		return c.JSON(http.StatusOK, struct {
-			status string
-		}{status: "OK"})
+			Status string `json:"status"`
+		}{Status: "OK"})
 	}
 }
